@@ -18,7 +18,7 @@ def score_dataset(X_train,X_valid,y_train,y_valid) :
   model = RandomForestRegressor(n_estimators = 200,random_state = 21)
   model.fit(X_train,y_train)
   preds = model.predict(X_valid)
-  mae = meaan_absolute_error(y_valid,preds)
+  mae = mean_absolute_error(y_valid,preds)
   return mae
 
 object_cols = [col for col in X_train.columns

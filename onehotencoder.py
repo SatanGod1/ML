@@ -29,7 +29,7 @@ low_cardinality_cols = [cname for cname in object_cols
                        if X_train[cname].nunique() < 10 and X_train[cname].dtype == 'object']
 OH_encoder = OneHotEncoder(handle_unknown = 'ignore' , sparse_output = False)
 OH_train_cols = pd.DataFrame(OH_encoder.fit_transform(X_train[object_cols]))
-OH_valid_cols = pd.DataFrame(OH-encoder.transform(X_valid[object_cols]))
+OH_valid_cols = pd.DataFrame(OH_encoder.transform(X_valid[object_cols]))
 
 OH_train_cols.index = X_train.index
 OH_valid_cols.index = X_valid.index

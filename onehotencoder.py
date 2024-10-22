@@ -4,7 +4,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
-X = pd.read_csv('data.csv' , index = 'Id')
+X = pd.read_csv('train.csv' , index = 'Id')
 X.dropna(subset = ['SalePrice'],axis = 0, inplace = True)
 y = X.SalePrice
 X.drop(['SalePrice'], axis = 1 , inplace = True )
